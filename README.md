@@ -35,6 +35,7 @@ O microserviço de agendamentos de consultas é uma parte fundamental do sistema
 - **Node.js** e **TypeScript** para desenvolvimento do backend.
 - **Fastify** microframework web focado em ser extremamente rápido, leve e eficiente para criar APIs e aplicações HTTP.
 - **TypeORM** para persistência e gerenciamento de banco de dados PostgreSQL.
+- **PostgreSQL** como banco de dados relacional.
 - **Docker** e **Docker Compose** para containerização.
 - **tsyringe** para injeção de dependências.
 
