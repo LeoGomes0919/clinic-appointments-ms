@@ -5,6 +5,15 @@ Para uma correta execução, é necessário que o microserviço de gerenciamento
 
 [Link para o Microsservice](https://github.com/LeoGomes0919/clinic-user-managment-ms)
 
+Deve ser criado uma rede no Docker para que os dois microsserviços possam se comunicar.
+```bash
+docker network create clinic-network
+```
+Caso já tenha criado a rede, você pode verificar com o seguinte comando:
+```bash
+docker network ls
+```
+
 ## Sumário
 - [🩺 Clinic Appointments Microservice](#-clinic-appointments-microservice)
   - [Sumário](#sumário)

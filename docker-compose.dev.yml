@@ -37,9 +37,13 @@ services:
     volumes:
       - .:/home/node/app
     command: >
-      sh -c "echo 'Waiting for DB to be ready...' &&
-      sleep 10 &&
-      npm run typeorm migration:run && npm run dev
+      sh -c "
+        echo '🔄 Esperando banco ficar disponível...' &&
+        /wait-for-it.sh appointments-db:5432 --strict --timeout=60 &&
+        echo '🚀 Rodando migrations...' &&
+        npm run typeorm migration:run && 
+        echo '✅ Iniciando app...' &&
+        npm run dev
       "
     networks:
       - clinic-network
