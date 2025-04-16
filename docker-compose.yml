@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  clinic-appointments-ms:
+    build: .
+    ports:
+      - "${PORT:-3001}:3001"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - clinic-network
+
+networks:
+  clinic-network:
+   external: true

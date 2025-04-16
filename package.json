@@ -1,0 +1,71 @@
+{
+  "name": "clinic-appointments-ms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsup src --out-dir dist",
+    "lint": "eslint src --ext .ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typeorm": "tsx -r dotenv/config -r tsconfig-paths/register ./node_modules/typeorm/cli.js -d ./src/infra/config/dataSource.ts",
+    "migration:create": "npx typeorm migration:create",
+    "migration:run": "npx typeorm migration:run",
+    "migration:revert": "npx typeorm migration:revert",
+    "docker:dev": "NODE_ENV=development COMPOSE_BAKE=true docker compose -f docker-compose.dev.yml up --build",
+    "docker:prod": "NODE_ENV=production COMPOSE_BAKE=true docker compose -f docker-compose.yml up --build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@faker-js/faker": "^9.6.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/node": "^22.13.9",
+    "@vitest/coverage-v8": "^3.0.7",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.2",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-vitest": "^0.5.4",
+    "globals": "^16.0.0",
+    "prettier": "3.5.3",
+    "tsconfig-paths": "^4.2.0",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.0",
+    "vitest": "^3.0.7"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.0.0",
+    "@fastify/http-proxy": "^11.1.2",
+    "@fastify/rate-limit": "^10.2.2",
+    "@fastify/swagger": "^9.4.2",
+    "@fastify/swagger-ui": "^5.2.2",
+    "axios": "^1.8.4",
+    "bcrypt": "^5.1.1",
+    "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0",
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.1",
+    "fastify-type-provider-zod": "^4.0.2",
+    "pg": "^8.13.3",
+    "reflect-metadata": "^0.2.2",
+    "tsyringe": "^4.8.0",
+    "typeorm": "^0.3.21",
+    "uuid": "^11.1.0",
+    "zod": "^3.24.2"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "bcrypt",
+      "esbuild"
+    ],
+    "onlyBuiltDependencies": [
+      "bcrypt"
+    ]
+  }
+}

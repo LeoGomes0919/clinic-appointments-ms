@@ -1,0 +1,11 @@
+{
+  "openapi": {
+    "info": {
+      "title": "clinic-appointments-ms",
+      "version": "1.0.0",
+      "description": "Microservice for managing clinic appointments"
+    }
+  },
+  "routerDoc": "/api/docs",
+  "routerPrefix": "/api"
+}
