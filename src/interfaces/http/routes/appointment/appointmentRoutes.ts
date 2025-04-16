@@ -74,7 +74,7 @@ export const appointmentRoutes = (): IRouterResponse[] => {
       },
     },
     {
-      method: 'patch',
+      method: 'delete',
       path: '/appointments/:id/cancel',
       schema: {
         tags: ['appointments'],
