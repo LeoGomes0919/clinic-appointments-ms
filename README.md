@@ -49,6 +49,7 @@ As camadas principais são:
 - **Interfaces:** Expõe APIs REST via controllers, rotas e serializers.
 
 Essa separação proporciona alta coesão e baixo acoplamento, facilitando a manutenção e evolução do sistema.
+Todo processo de comunicação entre os microsserviços é feito através de APIs REST, utilizando o padrão **JSON** para troca de dados.
 
 ## Pré-requisitos
 - Docker (para execução via containers)
